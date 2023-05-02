@@ -8,25 +8,44 @@
 @*esto es el contenido que se mostrara de una vista parcial*@
 <p><strong>Mostrando lista desde la vista parcial </strong></p>
 
+<form id="registration-form" runat="server">
+    <div class="container">
+        <h1>School Registration</h1>
+        <hr />
+        <table class="table">
+            <thead class="table-bordered">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">NOMBRE</th>
+                </tr>
+            </thead>
+            <tbody class="table-bordered">
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.UniqueId</td>
+                        <td>@obj.Nombre</td>
+                    </tr>
 
-<table class="table table-dark table-hover">
-    <thead class="table table-striped">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">NOMBRE</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var obj in Model)
-        {
-            <tr>
-                <td>@obj.UniqueId</td>
-                <td>@obj.Nombre</td>
-            </tr>
+                }
+            </tbody>
+        </table>
+        <button href="~/Alumno/Index" class="btn btn-primary">Alumnos</button>
+        <br />
+        <button href="~/Alumno/MultiAlumno" class="btn btn-primary">Multi-Alumnos</button>
+         <br />
+        <button href="~/Asignatura/Index" class="btn btn-info">Asignaturas</button>
+        <br />
+        <button href="~/Asignatura/MultiAsignatura" class="btn btn-primary">Multi-Asignaturas</button>
 
-        }
-    </tbody>
-</table>
+    </div>
+</form>
+<div class="card"></div>
+<br />
+<form class="form-inline" asp-area="Alumno" asp-page="/Alumno/Index">
+    <button href="~/Alumno/Index" class="btn btn-primary">Alumnos</button>
+</form>
+
 
 
 

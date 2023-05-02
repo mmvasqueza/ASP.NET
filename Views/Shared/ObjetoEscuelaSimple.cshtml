@@ -1,13 +1,13 @@
 ﻿@*/*modelo fuertemente tipado*/*@
 @model ObjetoEscuelaBase;
-
-
 @{
     ViewData["Title"] = "Información Asignaturas";
     Layout = "Simple";
 }
 
+@*Esto es una vista parcial que contiene un bloque de codigo 
+    y se incoca dentro de la vista principal*@
 <p>
-    Nombre: @Model.Nombre <br />
     Id: @Model.UniqueId<br />
+    Nombre: @Model.Nombre <br />
 </p>

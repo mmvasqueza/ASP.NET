@@ -7,12 +7,17 @@
 }
 
 <h1>Asignatura: @ViewData["Title"]</h1>
+@*Obteniendo datos desde el controlador invocando al objeto*@
 <h2>Nombre: @Model.Nombre </h2>
 <p>Fecha: @Model.Fecha</p>
 
 <p><strong>Desde la vista normal </strong></p>
+
+@*Vista parcial que renderiza la vista*@
 <partial name="ObjetoEscuelaSimple" />
 
+
+@*Obtiene los datos desde el controlador por medio de ViewBag y ViewData*@
 <p><strong><i>Año de fundación: @ViewBag.CosaDinamica</i></strong></p>
 
 <p><strong><i>Año de fundación: @ViewData["CosaDinamica"]</i></strong></p>

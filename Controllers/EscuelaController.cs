@@ -10,19 +10,22 @@ namespace MVC.Controllers
         // GET: EscuelaController
         public IActionResult Index()
         {
+            //Instancia dle objeto escuela que proviene del modelo
             var escuela = new Escuela();
-            escuela.AñoDeCreación = 2005;
 
-            escuela.UniqueId = Guid.NewGuid().ToString();
+            //Asignando valores a las propiedades del modelo
+                        escuela.UniqueId = Guid.NewGuid().ToString(); // Genera un Id aleatoreo
+            escuela.AñoDeCreación = 2005;
             escuela.Nombre = "Platzi School";
             escuela.Ciudad = "Granada, NI";
             escuela.Pais = "Nicaragua";
             escuela.Dirección = "Av. 1263 Road Street";
             escuela.TipoEscuela = TiposEscuela.Secundaria;
             
+            //Obtiene datos del controlador que podemos usar como banderas
             ViewBag.CosaDinamica = "La monja1";
 
-            return View(escuela);
+            return View(escuela);//Retornamos como parametro el objeto escuela
         }
 
         // GET: EscuelaController/Details/5
