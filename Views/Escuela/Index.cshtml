@@ -1,0 +1,27 @@
+﻿@*/*modelo fuertemente tipado*/*@
+@model Escuela;
+
+
+@{
+    ViewData["Title"] = "Información Escuela";
+}
+
+<h1>Escuela: @ViewData["Title"]</h1>
+<h2>Nombre: @Model.Nombre </h2>
+<p><strong>Año de fundación: @Model.AñoDeCreación</strong></p>
+<p><strong>Tipo Escuela: @Model.TipoEscuela</strong></p>
+
+@*Haciendo uso de un viewBag desde el controlador*@
+<p><strong><i>Año de fundación: @ViewBag.CosaDinamica</i></strong></p>
+
+@*Haciendo uso de un viewData desde el controlador*@
+<p><strong><i>Año de fundación: @ViewData["CosaDinamica"]</i></strong></p>
+
+
+<p><strong>Cuidad: @Model.Ciudad</strong></p>
+
+
+<p><strong>País: @Model.Pais</strong></p>
+
+
+<p><strong>País: @Model.Dirección</strong></p>

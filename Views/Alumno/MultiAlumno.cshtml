@@ -1,0 +1,18 @@
+﻿@*/*modelo fuertemente tipado*/*@
+@model List<Alumno>;
+@*/*modelo debilmente tipado*/*@
+@{
+    ViewData["Title"] = "Información Alumnos";
+    Layout = "simple"; @*Aqui invocamos un loyout creado por nosotros sino se especifica visual lo reconoce por convencion*@
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p><strong>Mostrando mensaje desde la vista normal </strong></p>
+@*Aqui invocamos a una vista parcial*@
+<partial name="ListaObjetoEscuela" />
+
+
+
+
+

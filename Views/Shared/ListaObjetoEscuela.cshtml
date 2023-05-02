@@ -1,0 +1,33 @@
+﻿
+
+@{
+    ViewData["Title"] = "Información Asignaturas";
+    Layout = "Simple";
+}
+
+@*esto es el contenido que se mostrara de una vista parcial*@
+<p><strong>Mostrando lista desde la vista parcial </strong></p>
+
+
+<table class="table table-dark table-hover">
+    <thead class="table table-striped">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.UniqueId</td>
+                <td>@obj.Nombre</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
+

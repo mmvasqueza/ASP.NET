@@ -1,0 +1,17 @@
+﻿@*/*modelo fuertemente tipado*/*@
+@model List<Asignatura>;
+
+@{
+    ViewData["Title"] = "Información Asignaturas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<p><strong>Mostrando desde la vista parcial </strong></p>
+@*esto es una vista parcial*@
+@foreach (var asignatura in Model)
+{
+    <partial name="ObjetoEscuelaSimple" model="asignatura" />
+}
+
